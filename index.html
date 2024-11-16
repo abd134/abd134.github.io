@@ -3,31 +3,134 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Publications</title>
-  <link rel="stylesheet" href="style.css">
+  <title>My Personal Webpage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #2b2b2b;
+      color: white;
+      padding: 1.5rem 0;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1.2rem;
+    }
+    nav {
+      background-color: #4CAF50;
+      padding: 0.5rem 0;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-size: 1rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    section h2 {
+      font-size: 1.8rem;
+      border-bottom: 2px solid #4CAF50;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .profile {
+      text-align: center;
+    }
+    .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #4CAF50;
+    }
+    .profile p {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin-bottom: 1rem;
+    }
+    ul li a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+    ul li a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #2b2b2b;
+      color: white;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Publications</h1>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <h1>[Your Name]</h1>
+    <p>[Your Title or Affiliation]</p>
   </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#contact">Contact</a>
+  </nav>
   <main>
+    <section id="about" class="profile">
+      <img src="your-photo.jpg" alt="Your Photo">
+      <p>Hello! I am [Your Name], a [Your Role] at [Your Institution]. My research focuses on [Research Focus].</p>
+    </section>
+    <section id="research">
+      <h2>Research Interests</h2>
+      <ul>
+        <li>Topic 1: Brief description of your research topic.</li>
+        <li>Topic 2: Brief description of your research topic.</li>
+        <li>Topic 3: Brief description of your research topic.</li>
+      </ul>
+    </section>
     <section id="publications">
-      <article>
-        <h2>Title of Paper</h2>
-        <p><strong>Authors:</strong> Your Name, Collaborator Name</p>
-        <p><strong>Journal:</strong> Journal Name, Year</p>
-        <p><a href="link-to-paper.pdf">[PDF]</a> | <a href="link-to-publisher">[Publisher]</a></p>
-      </article>
-      <!-- Add more articles for other publications -->
+      <h2>Publications</h2>
+      <ul>
+        <li><a href="link-to-paper.pdf">Publication Title 1</a> - Description of the publication.</li>
+        <li><a href="link-to-paper.pdf">Publication Title 2</a> - Description of the publication.</li>
+        <li><a href="link-to-paper.pdf">Publication Title 3</a> - Description of the publication.</li>
+      </ul>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+      <p>Website: <a href="https://yourwebsite.com">https://yourwebsite.com</a></p>
     </section>
   </main>
   <footer>
-    <p>&copy; 2024 Your Name. All rights reserved.</p>
+    <p>&copy; 2024 [Your Name]. All rights reserved.</p>
   </footer>
 </body>
 </html>
