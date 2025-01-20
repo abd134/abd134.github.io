@@ -12,20 +12,45 @@
       color: #333;
       line-height: 1.6;
       background-color: #f9f9f9;
+      display: flex;
     }
-    header {
+    .sidebar {
+      width: 250px;
       background-color: #2b2b2b;
       color: white;
-      padding: 1.5rem 0;
+      height: 100vh;
+      position: fixed;
+      padding: 1rem;
+    }
+    .sidebar h2 {
       text-align: center;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
     }
-    header p {
-      margin: 0.5rem 0 0;
-      font-size: 1.2rem;
+    .sidebar ul li {
+      margin: 1rem 0;
+    }
+    .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      padding: 0.5rem;
+    }
+    .sidebar ul li a:hover {
+      background-color: #444;
+    }
+    .content {
+      margin-left: 270px;
+      width: calc(100% - 270px);
+      padding: 2rem;
+    }
+    header, footer {
+      background-color: #2b2b2b;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 0;
     }
     nav {
       background-color: #2b2b2b;
@@ -41,11 +66,6 @@
     nav a:hover {
       text-decoration: underline;
     }
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
     section {
       margin-bottom: 2rem;
     }
@@ -55,85 +75,60 @@
       padding-bottom: 0.5rem;
       margin-bottom: 1rem;
     }
-    .profile {
-      text-align: left;
-    }
     .profile img {
       width: 157px;
       height: 198px;
-      border-radius: 0%;
+      border-radius: 0;
       border: 1px solid #2b2b2b;
-    }
-    .profile p {
-      font-size: 1.1rem;
-      margin-top: 0.5rem;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li {
-      margin-bottom: 1rem;
-    }
-    ul li a {
-      color: #2b2b2b;
-      text-decoration: underline;
-    }
-    ul li a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #2b2b2b;
-      color: white;
-      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Abdullah Imran</h1>
-    <p>PhD Candidate</p>
-  </header>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#teaching">Teaching</a>
-    <a href="#publications">Publications</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <main>
-    <section id="about" class="profile">
-      <img src="ProPic.jpeg" alt="Your Photo">
-      <p>Hello! I am Abdullah Imran, a PhD student at Purdue University. My research focuses on Android security, with an emphasis on protecting user data, detecting and mitigating mobile malware, and addressing vulnerabilities in applications. </p>
-    </section>
-    <section id="Research">
-      <h2>Research</h2>
-      <p>I work</p>
-    </section>
-    <section id="Teaching">
-      <h2>Teaching</h2>
-      <p>Teaching</a></p>
-    </section>
-    <section id="publications">
-      <h2>Publications</h2>
-      <ul>
-        <li><b><a href=https://dl.acm.org/doi/abs/10.1145/3643832.3661893>Automated Detection of Cryptographic Inconsistencies in Android’s Keymaster Implementations.</a></b> - Abdullah Imran, Antonio Bianchi. Proceedings of the 22nd Annual International Conference on Mobile Systems, Applications and Services
-</li>
-        <li><b></b><a href=https://ieeexplore.ieee.org/abstract/document/10646680>Wear’s my data? understanding the cross-device runtime permission model in wearables</a></b> - Doguhan Yeke, Muhammad Ibrahim, Güliz Seray Tuncay, Habiba Farrukh, Abdullah Imran, Antonio Bianchi, Z Berkay Celik. 2024 IEEE Symposium on Security and Privacy (SP)</li>
-        <li><b><a href=https://www.usenix.org/conference/usenixsecurity22/presentation/imran>{SARA}: Secure Android Remote Authorization.</a></b> - Abdullah Imran, Habiba Farrukh, Muhammad Ibrahim, Z Berkay Celik, Antonio Bianchi. 31st USENIX Security Symposium </li>
-        <li><b><a href=https://dl.acm.org/doi/abs/10.1145/3458864.3466627> SafetyNOT: on the usage of the SafetyNet attestation API in Android.</a></b> - Muhammad Ibrahim, Abdullah Imran, Antonio Bianchi. Proceedings of the 19th Annual International Conference on Mobile Systems, Applications, and Services</li>
-       
-      </ul>
-    </section>
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href=mailto:imran8@purdue.edu>imran8@purdue.edu</a></p>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2024 [Abdullah Imran]. All rights reserved.</p>
-  </footer>
+  <div class="sidebar">
+    <h2>Navigation</h2>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  
+  <div class="content">
+    <header>
+      <h1>Abdullah Imran</h1>
+      <p>PhD Candidate</p>
+    </header>
+    <main>
+      <section id="about" class="profile">
+        <img src="ProPic.jpeg" alt="Your Photo">
+        <p>Hello! I am Abdullah Imran, a PhD student at Purdue University...</p>
+      </section>
+      <section id="research">
+        <h2>Research</h2>
+        <p>I work...</p>
+      </section>
+      <section id="teaching">
+        <h2>Teaching</h2>
+        <p>Teaching...</p>
+      </section>
+      <section id="publications">
+        <h2>Publications</h2>
+        <ul>
+          <li><a href="https://dl.acm.org/doi/abs/10.1145/3643832.3661893">Automated Detection of Cryptographic Inconsistencies...</a></li>
+          <li><a href="https://ieeexplore.ieee.org/abstract/document/10646680">Wear’s my data?...</a></li>
+          <li><a href="https://www.usenix.org/conference/usenixsecurity22/presentation/imran">SARA: Secure Android Remote Authorization...</a></li>
+        </ul>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:imran8@purdue.edu">imran8@purdue.edu</a></p>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Abdullah Imran. All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>
